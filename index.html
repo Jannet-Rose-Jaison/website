@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Personal Portfolio of Jannet Rose Jaison: projects, skills, articles, and contact." />
+  <meta name="keywords" content="portfolio, web developer, projects, resume, dev.to, openweathermap" />
+  <meta name="author" content="Jannet Rose Jaison" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jannet Rose Jaison | Portfolio</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- jQuery (used site-wide and for Projects gallery) -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+
+  <!-- Site JS -->
+  <script src="js/main.js" defer></script>
+  <script src="js/weather.js" defer></script>
+  <script src="js/rss.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Jannet Rose Jaison</a></h1>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <button id="menuToggle" aria-expanded="false" aria-controls="navList" aria-label="Toggle navigation">☰</button>
+        <ul id="navList">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="education.html">Education & Technical</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="welcome" class="card">
+      <div class="welcome-wrap">
+        <img src="C:\Users\janet\Downloads\profilepic.jpg" alt="Profile picture of Jannet Rose Jaison" class="profile-pic" />
+        <div>
+          <h2 id="greeting">Hello!</h2>
+          <p>Welcome to my portfolio. I’m <strong>Jannet Rose Jaison</strong>, a third year Btech student specialising in Artificial Intelligence and Data Science,  asspiring to become a skilled A.I engineer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weather App (MANDATORY on Home) -->
+    <section id="weatherApp" class="card">
+      <h2>Live Weather</h2>
+      <p>Want to know the weather of your city?</p>
+      <div class="weather-form">
+        <input id="cityInput" type="text" placeholder="Enter city" aria-label="City name" />
+        <button id="getWeather">Get Weather</button>
+      </div>
+      <div id="weatherResult" class="weather-result" aria-live="polite"></div>
+      <p class="helper-text">Tip: try your city, or “London”, “Tokyo”, etc.</p>
+    </section>
+
+    <!-- Dev.to Articles (RSS via REST API) -->
+    <section id="articles" class="card">
+      <h2> Latest Articles on Dev.to</h2>
+      <ul id="rssFeed" class="article-list" aria-live="polite">
+        <!-- Filled by js/rss.js -->
+      </ul>
+      <p class="helper-text">Fetched via <code>fetch()</code> from <code>dev.to</code> API.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <small>&copy; <span id="year"></span> Jannet Rose Jaison. All rights reserved.</small>
+          </div>
+  </footer>
+</body>
+</html>

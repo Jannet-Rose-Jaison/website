@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Contact me via form or find me on LinkedIn." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Jannet Rose Jaison</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Jannet Rose Jaison</a></h1>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <button id="menuToggle" aria-expanded="false" aria-controls="navList">☰</button>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="education.html">Education & Technical</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Contact Me</h2>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+          <small class="error" id="err-name"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          <small class="error" id="err-email"></small>
+        </div>
+
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+          <small class="error" id="err-message"></small>
+        </div>
+
+        <button type="submit">Send</button>
+        <p id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Also reach me at</h2>
+      <p>
+        <a href="mailto:janetjaison12345@gmail.com">janetjaison12345@gmail.com</a> ·
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <small>&copy; <span id="year"></span> Jannet Rose Jaison.</small>
+    
+    </div>
+  </footer>
+</body>
+</html>

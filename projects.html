@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Highlighted projects with descriptions and screenshots." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Jannet Rose Jaison</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Jannet Rose Jaison</a></h1>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <button id="menuToggle" aria-expanded="false" aria-controls="navList">☰</button>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="cv.html">CV</a></li>
+          <li><a href="education.html">Education & Technical</a></li>
+          <li><a class="active" href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Projects Gallery</h2>
+
+      <div class="gallery">
+        <div class="thumbs" id="thumbnails">
+          <!-- Thumbnails (click to update main display via jQuery) -->
+          <img src="C:\Users\janet\OneDrive\Pictures\Screenshots 1\Screenshot (1).png"
+               alt="Project 1 thumbnail"
+               data-name="Weather Prediction App"
+               data-desc="A real-time weather prediction app that predicts weather of a particular region based on temperature, humidity, pressure and wind speed." />
+        </div>
+
+        <div class="main-display" id="mainDisplay">
+          <h3 id="projectName">Click a project to view details</h3>
+          <p id="projectDesc">Select a project from the thumbnails to see details here.</p>
+          <img id="mainImage" src="" alt="" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <small>&copy; <span id="year"></span> jannet rose jaison.</small>
+    </div>
+  </footer>
+
+  <!-- Inline script to handle gallery functionality -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const thumbs = document.querySelectorAll("#thumbnails img");
+      const mainImage = document.getElementById("mainImage");
+      const projectName = document.getElementById("projectName");
+      const projectDesc = document.getElementById("projectDesc");
+
+      thumbs.forEach(thumb => {
+        thumb.addEventListener("click", () => {
+          mainImage.src = thumb.src;
+          mainImage.alt = thumb.alt;
+          projectName.textContent = thumb.dataset.name || "Untitled Project";
+          projectDesc.textContent = thumb.dataset.desc || "";
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="CV: education, skills, certifications, and experience." />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV | Jannet Rose Jaison</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1 class="logo"><a href="index.html">Jannet Rose Jaison</a></h1>
+      <nav class="main-nav" aria-label="Main Navigation">
+        <button id="menuToggle" aria-expanded="false" aria-controls="navList">☰</button>
+        <ul id="navList">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a class="active" href="cv.html">CV</a></li>
+          <li><a href="education.html">Education & Technical</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Curriculum Vitae</h2>
+      <p>View or download my CV:</p>
+      <!-- HTML5 iframe requirement -->
+      <div class="iframe-wrap">
+        <iframe src="cv.pdf" title="Embedded CV PDF" loading="lazy"></iframe>
+      </div>
+      <p><a href="cv.pdf" download>Download CV (PDF)</a></p>
+    </section>
+
+     </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <small>&copy; <span id="year"></span> Jannet Rose Jaison.</small>
+         </div>
+  </footer>
+</body>
+</html>
